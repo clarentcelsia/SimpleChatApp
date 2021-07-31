@@ -1,40 +1,24 @@
 package com.example.chatminiproject.Adapter
 
-import android.app.Activity
-import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.view.get
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.liveData
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.chatminiproject.Model.Chat
 import com.example.chatminiproject.Model.User
 import com.example.chatminiproject.R
 import com.example.chatminiproject.Repository.ChatRepository
 import com.example.chatminiproject.Repository.FirebaseRepository
-import com.example.chatminiproject.Repository.Root
 import com.example.chatminiproject.Util.Util
-import com.example.chatminiproject.ViewModel.UIViewModel
 import com.example.chatminiproject.databinding.UserItemBinding
-import com.google.firebase.database.*
 import kotlinx.coroutines.*
 import java.lang.Exception
-import java.text.Format
-import java.text.SimpleDateFormat
-import java.time.Instant
-import java.util.*
 import kotlin.collections.ArrayList
 
-class UserAdapter(val context: LifecycleOwner): RecyclerView.Adapter<UserAdapter.UserViewHolder>()  {
+class UserAdapter: RecyclerView.Adapter<UserAdapter.UserViewHolder>()  {
 
     inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val binding = UserItemBinding.bind(itemView)
