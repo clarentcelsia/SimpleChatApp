@@ -18,8 +18,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
-import java.text.Format
-import java.text.SimpleDateFormat
 import java.util.*
 
 open class MyRepository<Model, Entity>(
