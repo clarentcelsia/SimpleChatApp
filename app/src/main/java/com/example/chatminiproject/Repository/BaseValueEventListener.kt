@@ -1,6 +1,5 @@
 package com.example.chatminiproject.Repository
 
-import com.example.chatminiproject.Model.Chat
 import com.example.chatminiproject.Repository.Mapper.FirebaseMapper
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
