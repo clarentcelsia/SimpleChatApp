@@ -5,12 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.widget.PopupMenu
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chatminiproject.Adapter.UserAdapter
-import com.example.chatminiproject.Model.User
 import com.example.chatminiproject.ViewModel.UIViewModel
 import com.example.chatminiproject.databinding.ActivityMainBinding
 
