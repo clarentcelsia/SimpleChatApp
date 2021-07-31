@@ -1,15 +1,10 @@
 package com.example.chatminiproject
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide
 import com.example.chatminiproject.Adapter.ChatAdapter
-import com.example.chatminiproject.Model.Chat
 import com.example.chatminiproject.Util.Util
 import com.example.chatminiproject.ViewModel.UIViewModel
 import com.example.chatminiproject.databinding.ActivityChatPageBinding
