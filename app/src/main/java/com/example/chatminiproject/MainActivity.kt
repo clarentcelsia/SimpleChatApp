@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(false)
         }
 
-        userAdapter = UserAdapter(this)
+        userAdapter = UserAdapter()
         binding.rvUser.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             setHasFixedSize(true)
