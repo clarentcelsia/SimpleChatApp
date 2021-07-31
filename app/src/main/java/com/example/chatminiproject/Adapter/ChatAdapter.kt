@@ -7,15 +7,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewbinding.ViewBinding
 import com.example.chatminiproject.Model.Chat
 import com.example.chatminiproject.R
 import com.example.chatminiproject.Util.Util
-import com.example.chatminiproject.databinding.ChatItemReceiverBinding
-import com.example.chatminiproject.databinding.ChatItemSenderBinding
 import de.hdodenhof.circleimageview.CircleImageView
-import java.text.SimpleDateFormat
-import java.util.*
 
 private const val SENDER = 0
 private const val RECEIVER = 1
