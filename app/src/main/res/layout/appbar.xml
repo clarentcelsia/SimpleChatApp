@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:id="@+id/myToolbar"
+    android:background="@color/teal_700">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/ivProfileBar"
+        android:src="@drawable/defaultperson"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="username"
+        android:textSize="22sp"
+        android:elegantTextHeight="true"
+        android:textColor="@color/white"
+        android:inputType="textCapSentences"
+        android:layout_marginStart="30dp"
+        android:id="@+id/tvUsernameBar"
+        tools:ignore="TextViewEdits" />
+
+</androidx.appcompat.widget.Toolbar>

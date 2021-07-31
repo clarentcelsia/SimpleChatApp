@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/rProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/defaultperson" />
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/rProfile"
+        android:background="@drawable/receiver_custom_bubble"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="3dp"
+            android:text="Hello"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="22:12"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            android:layout_gravity="start"
+            android:paddingStart="20dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="5dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvHasRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</RelativeLayout>
