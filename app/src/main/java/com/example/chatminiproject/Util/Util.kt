@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Util {
+object Util {
 
     fun setImageResource(view: View, imageUrl: String, target: ImageView) {
         if (imageUrl == "default") {

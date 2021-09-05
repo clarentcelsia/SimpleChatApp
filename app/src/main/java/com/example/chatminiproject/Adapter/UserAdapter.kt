@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chatminiproject.Model.Chat
 import com.example.chatminiproject.Model.User
-import com.example.chatminiproject.R
 import com.example.chatminiproject.Repository.ChatRepository
 import com.example.chatminiproject.Repository.FirebaseRepository
 import com.example.chatminiproject.Util.Util
@@ -38,15 +37,15 @@ class UserAdapter: RecyclerView.Adapter<UserAdapter.UserViewHolder>()  {
     val userDiffer = AsyncListDiffer(this, differCallback)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserAdapter.UserViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.user_item, parent, false)
-        return UserViewHolder(view)
+        val view = UserItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return UserViewHolder(view.root)
     }
 
     override fun onBindViewHolder(holder: UserAdapter.UserViewHolder, position: Int) {
         val userIndex = userDiffer.currentList[position]
 
         with(holder){
-            Util().setImageResource(this.itemView, userIndex.profile, binding.itemProfile)
+            Util.setImageResource(this.itemView, userIndex.profile, binding.itemProfile)
             binding.itemUsername.text = userIndex.username
             bindMessageView(userIndex.id, binding.itemMessage)
             binding.root.setOnClickListener {
@@ -71,8 +70,7 @@ class UserAdapter: RecyclerView.Adapter<UserAdapter.UserViewHolder>()  {
             for (long in data) {
                 time.add(long.time)
             }
-            val util = Util()
-            val result = util.compareTime(time)
+            val result = Util.compareTime(time)
 
             var string = ""
             for (message in data) {

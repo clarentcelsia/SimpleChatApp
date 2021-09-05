@@ -24,7 +24,7 @@ class ChatAdapter(val imageUrl: String): RecyclerView.Adapter<ChatAdapter.ChatVi
         }
 
         override fun areContentsTheSame(oldItem: Chat, newItem: Chat): Boolean {
-            return oldItem.equals(newItem)
+            return oldItem == newItem
         }
 
     }
@@ -46,9 +46,8 @@ class ChatAdapter(val imageUrl: String): RecyclerView.Adapter<ChatAdapter.ChatVi
         val read = holder.itemView.findViewById<TextView>(R.id.tvHasRead)
         val time = holder.itemView.findViewById<TextView>(R.id.tvTime)
 
-        val util = Util()
         holder.itemView.apply{
-            util.setImageResource(this, imageUrl, profile)
+            Util.setImageResource(this, imageUrl, profile)
             message.text = chatIDX.message
             if(position == chatDiffer.currentList.size - 1) {
                 read.visibility = if (chatIDX.isseen) View.VISIBLE
@@ -62,7 +61,7 @@ class ChatAdapter(val imageUrl: String): RecyclerView.Adapter<ChatAdapter.ChatVi
     override fun getItemCount(): Int = chatDiffer.currentList.size
 
     private fun convertLongToTime(time: Long): String{
-        return Util().convertLongToTime(time, pattern = "HH:mm")
+        return Util.convertLongToTime(time, pattern = "HH:mm")
     }
 
     override fun getItemViewType(position: Int): Int {
